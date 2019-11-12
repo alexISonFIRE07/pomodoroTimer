@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!--This is the header-->
+
+    <header>
+        <nav class="justify-content-between navbar navbar-expand-lg navbar-light bg-light">
+            <h1 class="text-center">Pomodoro Timer</h1>
+            <div> 
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="#">Timer</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="./history.html">History</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="./about.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    
+
+
+    </header>
+
+<!--This is the main part of the page and should contain main content of the page-->
+
+    <main class="container text-center">
+        <section>
+            <h1 class="my-md-5 border-bottom border-dark border-5">The Timer</h1>
+        </section>
+        <article>
+            <p id="timer" class="font-weight-bold">25:00</p>
+            <button id=start type="button" class="btn-primary">Start</button>
+            <button id="stop" type="button" class="btn-secondart">Stop</button>
+            <button id="reset" type="button" class="btn-danger">Reset</button>
+        </article>
+
+        <section>
+            <h1 class="my-md-5 border-bottom border-dark border-5">The Counter</h1>
+        </section>
+        <article>
+            <p id="count" class="font-weight-bold">00:00</p>
+            <button id=startC type="button" class="btn-primary">Start</button>
+            <button id="stopC" type="button" class="btn-secondart">Stop</button>
+            <button id="resetC" type="button" class="btn-danger">Reset</button>
+        </article>
+    </main>
+
+<!--This is the footer and will have contact information ect-->
+
+    <footer class="container pt-4 my-md-5 border-top">
+        <div class="row">
+            <div class="col-4 col-md">
+                <h5>Features</h5>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="#">Cool Stuff</a></li>
+                    <li><a class="text-muted" href="#">Things</a></li>
+                    <li><a class="text-muted" href="#">Very Neato</a></li>
+                    <li><a class="text-muted" href="#">Junk</a></li>
+                    <li><a class="text-muted" href="#">Things that are cool</a></li>
+                </ul>
+            </div>
+
+            <div class="col-4 col-md">
+                <h5>Experience</h5>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="#">We do things</a></li>
+                    <li><a class="text-muted" href="#">Things we've done</a></li>
+                    <li><a class="text-muted" href="#">Very Neato </a></li>
+                    <li><a class="text-muted" href="http://www.alexjarmer.com">Crappy projects</a></li>
+                    <li><a class="text-muted" href="#">Jobs</a></li>
+                </ul>
+            </div>
+
+            <div class="col-4 col-md">
+                <h5>About</h5>
+                 <ul class="list-unstyled">
+                    <li><a class="text-muted" href="#">Who We Are</a></li>
+                    <li><a class="text-muted" href="#">Why We Are</a></li>
+                    <li><a class="text-muted" href="#">How We Are</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center text-muted font-weight-lighter border my-md-5">
+            <div class="my-md-5">
+                <p>Contact Alex at alex@jarmerjourneys.com</p> 
+                <p>Conact Brian at srt499@yahoo.com</p>
+            </div>
+        </div>  
+    </footer>
+</body>
+<script type="text/javascript" src="./timer.js"></script>
+<script type="text/javascript" src="./counter.js"></script>
+</html>
