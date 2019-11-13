@@ -4,3 +4,8 @@
 #count {
     font-size: 400%;
 }
+
+#customTimer{
+    display: none;
+    font-size: 200%;
+}
