@@ -9,3 +9,7 @@
     display: none;
     font-size: 200%;
 }
+
+#userInput{
+    width: 200px;
+}
