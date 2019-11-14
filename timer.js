@@ -25,17 +25,24 @@ function stopTimer(){
 }
 
 
-document.getElementById("start").addEventListener("click", function () {
+document.getElementById("start").addEventListener("click", copiedStartTimer);
+
+function copiedStartTimer() {
     display = document.querySelector('#timer');
     startTimer(timer, display);
-});
+    document.getElementById("start").removeEventListener("click", copiedStartTimer);
+};
+
+
 
 document.getElementById("stop").onclick = function(){
     stopTimer();
+    document.getElementById("start").addEventListener("click", copiedStartTimer);
 };
 
 document.getElementById("reset").onclick = function(){
     stopTimer();
     timer = 60 * 25;
     document.getElementById("timer").innerHTML = "25:00";
+    document.getElementById("start").addEventListener("click", copiedStartTimer);
 };

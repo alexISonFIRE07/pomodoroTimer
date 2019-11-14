@@ -28,19 +28,24 @@ function startCounter(){
     //assigns the setInterval method to a variable for later use with clearInterval
     clear=setInterval( function(){
         document.getElementById("count").innerHTML = updateCounter();
-    }, 1000)};    
-
+    }, 1000)
+    //removes the eventlistener so that when the start button is pressed again while timer is going, it doesn't call the startcounter function again, thus making the timer go twice as fast
+    document.getElementById("startC").removeEventListener("click", startCounter);
+};    
+//stop the counting. see comments on line 28 and 7
 function stopCounter(){
     clearInterval(clear);    
 }
 //Create a function that envokes the start counter function when the start button is clicked
 //Target the Start button
-document.getElementById("startC").onclick = function(){
-    startCounter();
-};
+document.getElementById("startC").addEventListener("click", startCounter);
+
+
 //Create a function that envokes the stop counter function when the stop button is clicked
 document.getElementById("stopC").onclick = function(){
     stopCounter();
+    //resets the event listener so that the start button will work again after removeeventlistener was envoked
+    document.getElementById("startC").addEventListener("click", startCounter);
 };
 
 //Create a function that resets the function to zero when the reset button is clicked
@@ -49,4 +54,8 @@ document.getElementById("resetC").onclick = function(){
     seconds = 0;
     minutes = 0;
     document.getElementById("count").innerHTML = "00:00";
+    
+    //resets the event listener so that the start button will work again after removeeventlistener was envoked
+    document.getElementById("startC").addEventListener("click", startCounter);
+
 };
